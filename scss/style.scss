@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap');
+$fontFamily: 'Open Sans', sans-serif;
+$fontSize: 16px;
+$orange: #f8a055;
+$black: #221f1a;
+$gray: #5a574e;
+$green: #988d51;
+$white:#fff;
+$transition: .4s ease;
+$padding: 70px 0;
+$textShadow: 0 0 2px  $black;
+/***************
+basic styles
+***************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    line-height: 1.7;
+    color: $black;
+}
+.container {
+    width: 60%;
+    margin: auto;
+}
