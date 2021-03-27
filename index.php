@@ -1,25 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php include 'header.php'?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6 - Healthy Food</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="scss/style.css">
-</head>
-
-<nav>
-    <div class="container">
-        <a href="">Healthy <span>Food</span></a>
-        <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="plan.php">Plan</a></li>
-        <li><a href="proizvodnja.php">Proizvodnja</a></li>
-        </ul>
+<header class="mainHeader"> 
+    <div>
+        <h1>Odaberite zdravlje</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit accusantium nulla nesciunt vitae
+            corrupti numquam quas voluptatum accusamus odit iure dolor adipisci magni, unde earum reprehenderit! Unde,
+            assumenda nulla.</p>
+        <button>Procitajte vise</button>
     </div>
-</nav>
+</header>
 
-</body>
-
-</html>
+<?php include 'footer.php'?>

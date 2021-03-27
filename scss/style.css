@@ -20,4 +20,182 @@ body {
   width: 60%;
   margin: auto;
 }
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+a {
+  color: #221f1a;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f8a055;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+/***nav***/
+nav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+nav .container .logo {
+  color: #f8a055;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+nav .container .logo span {
+  font-weight: 300;
+  color: #221f1a;
+  font-style: italic;
+}
+
+nav .container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify-content;
+      -ms-flex-pack: justify-content;
+          justify-content: justify-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+nav .container ul li {
+  margin-left: 50px;
+}
+
+/***footer***/
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: strech;
+      -ms-flex-align: strech;
+          align-items: strech;
+  direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer article {
+  text-align: left;
+  color: #fff;
+}
+
+footer article:nth-child(1) {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  background: #5a574e;
+  padding: 60px;
+}
+
+footer article:nth-child(1) h3 {
+  padding-bottom: 20px;
+}
+
+footer article:nth-child(2) {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  background: #f8a055;
+  padding: 60px;
+}
+
+footer article:nth-child(2) h2 {
+  padding-bottom: 20px;
+  font-size: 2rem;
+}
+
+.bootomBar {
+  text-align: center;
+}
+
+.bootomBar p {
+  padding: 20px;
+}
+
+.bootomBar p a {
+  color: #f8a055;
+}
+
+/***mainHeader***/
+.mainHeader {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.99)), to(rgba(255, 255, 255, 0.01))), url(../img/header.jpg);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.99), rgba(255, 255, 255, 0.01)), url(../img/header.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.mainHeader div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  margin-left: 10%;
+  padding: 40px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.99)), to(rgba(255, 255, 255, 0.01)));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.99), rgba(255, 255, 255, 0.01));
+}
+
+.mainHeader div h1 {
+  color: #f8a055;
+  text-shadow: 0 0 2px #221f1a;
+}
+
+.mainHeader div button {
+  padding: 15px 30px;
+  background: #f8a055;
+  border: none;
+  text-transform: uppercase;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.mainHeader div button:hover {
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  background: #f9ae6d;
+}
 /*# sourceMappingURL=style.css.map */
