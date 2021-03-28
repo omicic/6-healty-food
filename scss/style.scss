@@ -14,7 +14,7 @@ $textShadow: 0 0 2px  $black;
     display: flex;
     justify-content: $justify-content;
     align-items: $align-items;
-    direction: $direction;
+    flex-direction: $direction;
     flex-wrap: $wrap;
 }
 @mixin bgImg($bgPos, $bgSize, $bgRepeat, $height) {
@@ -73,6 +73,23 @@ a{
 ul{
     list-style: none;
 }
+
+    /***singleHeader***/
+    .singleHeader {
+        background-image:  linear-gradient(to right, rgba($white,0.99), rgba($white,0.01)),url(../img/header2.jpg);
+        @include flex(center, flex-start, column ,wrap );        
+        @include bgImg(center, cover, no-repeat, 50vh );
+        margin-left: 10%;
+        h1{
+            font-size: 3rem;
+            color: $orange;
+            text-shadow: $textShadow;
+        }
+        button{
+            @include btn;
+        }
+  
+    }
 
 /***nav***/
 nav {
@@ -147,7 +164,7 @@ footer{
             background:  linear-gradient(to right, rgba($white,0.99), rgba($white,0.01));
             h1{
                 color: $orange;
-                text-shadow: 0 0 2px $black;
+                text-shadow: $textShadow;
             }
 
             button{
@@ -172,7 +189,7 @@ footer{
             h3{
                 font-size: 5rem;
                 color: $orange;
-                text-shadow: 0 0 2px $black;
+                text-shadow: $textShadow;
             }
             h4{
                 font-size: 1.5rem;
@@ -180,5 +197,32 @@ footer{
             }
         }
     }
+    /***zeleno***/
+    .zelena {
+        padding: $padding;
+        color: $white;
+        background-image: url(../img/bg.jpg);
+        @include bgImg(center, cover, no-repeat, auto);
+        .container{
+            @include flex(space-between,center,row,wrap);
+            article {
+                flex: 0 0 45%;
+                img{
+                    width: 100%;
+                }
+                p{
+                    margin-top: 30px;
+                }
+                h2{
+                    margin-bottom:130px;
+                    text-shadow: $textShadow;
+                }
+        }
+    }
     
+    /***organic***/
+    .organic{
+        @extend .zelena;
+        background-image: url(../img/bg2.jpg);
+    }
 

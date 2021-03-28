@@ -41,6 +41,54 @@ ul {
   list-style: none;
 }
 
+/***singleHeader***/
+.singleHeader {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.99)), to(rgba(255, 255, 255, 0.01))), url(../img/header2.jpg);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.99), rgba(255, 255, 255, 0.01)), url(../img/header2.jpg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+  margin-left: 10%;
+}
+
+.singleHeader h1 {
+  font-size: 3rem;
+  color: #f8a055;
+  text-shadow: 0 0 2px #221f1a;
+}
+
+.singleHeader button {
+  padding: 15px 30px;
+  background: #f8a055;
+  border: none;
+  text-transform: uppercase;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.singleHeader button:hover {
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  background: #f9ae6d;
+}
+
 /***nav***/
 nav .container {
   display: -webkit-box;
@@ -52,7 +100,10 @@ nav .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -79,7 +130,10 @@ nav .container ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -99,7 +153,10 @@ footer {
   -webkit-box-align: strech;
       -ms-flex-align: strech;
           align-items: strech;
-  direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -163,7 +220,10 @@ footer article:nth-child(2) h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -210,7 +270,10 @@ footer article:nth-child(2) h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -240,5 +303,52 @@ footer article:nth-child(2) h2 {
 .uvod article h4 {
   font-size: 1.5rem;
   margin-bottom: 30px;
+}
+
+/***zeleno***/
+.zelena {
+  padding: 70px 0;
+  color: #fff;
+  background-image: url(../img/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+}
+
+.zelena .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.zelena .container article {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
+}
+
+.zelena .container article img {
+  width: 100%;
+}
+
+.zelena .container article:first-child p {
+  margin-top: 30px;
+}
+
+.zelena .container article:last-child h2 {
+  margin-bottom: 130px;
 }
 /*# sourceMappingURL=style.css.map */
