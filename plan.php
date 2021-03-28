@@ -25,7 +25,6 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores officiis magnam dolor aliquid veritatis
                 fugit, voluptates debitis reprehenderit? Dolor alias similique asperiores soluta eius cumque eum ullam
                 nesciunt harum aliquid.</p>
-
         </article>
     </div>
 </section>

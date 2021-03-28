@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap');
-$fontFamily: 'Open Sans', sans-serif;
+$fontFamily: 'Open Sans',
+sans-serif;
 $fontSize: 16px;
 $orange: #f8a055;
 $black: #221f1a;
@@ -7,35 +8,38 @@ $gray: #5a574e;
 $green: #988d51;
 $white:#fff;
 $transition: .4s ease;
-$padding: 70px 0;
-$textShadow: 0 0 2px  $black;
+$padding: 50px 0;
+$textShadow: 0 0 2px $black;
 
-@mixin flex($justify-content, $align-items, $direction, $wrap){
+@mixin flex($justify-content, $align-items, $direction, $wrap) {
     display: flex;
     justify-content: $justify-content;
     align-items: $align-items;
     flex-direction: $direction;
     flex-wrap: $wrap;
 }
+
 @mixin bgImg($bgPos, $bgSize, $bgRepeat, $height) {
-background-position: $bgPos;
-background-size: $bgSize;
-background-repeat: $bgRepeat;
-height: $height;
-    
+    background-position: $bgPos;
+    background-size: $bgSize;
+    background-repeat: $bgRepeat;
+    height: $height;
+
 }
+
 @mixin btn {
-padding: 15px 30px;
-background: $orange;
-border: none;
-text-transform: uppercase;
-margin-top: 20px;
-letter-spacing: 2px;
-cursor:pointer;
-&:hover{
-    transition: $transition;
-    background: lighten($orange,5%);
-}
+    padding: 15px 30px;
+    background: $orange;
+    border: none;
+    text-transform: uppercase;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    cursor: pointer;
+
+    &:hover {
+        transition: $transition;
+        background: lighten($orange, 5%);
+    }
 
 }
 
@@ -48,181 +52,331 @@ basic styles
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: $fontFamily;
     font-size: $fontSize;
     line-height: 1.7;
     color: $black;
 }
+
 .container {
     width: 60%;
     margin: auto;
 }
-h1{
+
+h1 {
     font-size: 4rem;
     text-align: center;
 }
-a{
+
+a {
     color: $black;
     text-decoration: none;
+
     &:hover {
-        color:$orange;
+        color: $orange;
         transition: $transition;
     }
 }
-ul{
+
+ul {
     list-style: none;
 }
 
-    /***singleHeader***/
-    .singleHeader {
-        background-image:  linear-gradient(to right, rgba($white,0.99), rgba($white,0.01)),url(../img/header2.jpg);
-        @include flex(center, flex-start, column ,wrap );        
-        @include bgImg(center, cover, no-repeat, 50vh );
-        margin-left: 10%;
-        h1{
-            font-size: 3rem;
-            color: $orange;
-            text-shadow: $textShadow;
-        }
-        button{
-            @include btn;
-        }
-  
+/***singleHeader***/
+.singleHeader {
+    background-image: linear-gradient(to right, rgba($white, 0.99), rgba($white, 0.01)), url(../img/header2.jpg);
+    @include flex(center, flex-start, column, wrap);
+    @include bgImg(center, cover, no-repeat, 50vh);
+    margin-left: 10%;
+
+    @media(max-width:768px) {
+        @include bgImg(left, cover, no-repeat, 50vh);
     }
+
+    h1 {
+        font-size: 3rem;
+        color: $orange;
+        text-shadow: $textShadow;
+
+        @media(max-width:768px) {
+            text-align: left;
+            font-size: 2rem;
+        }
+    }
+
+    button {
+        @include btn;
+    }
+
+}
 
 /***nav***/
 nav {
     .container {
         @include flex(space-between, center, row, wrap);
-        .logo{
-            color:$orange;
+
+        @media(max-width:768px) {
+            @include flex(space-between, center, column, wrap);
+
+        }
+
+        .logo {
+            color: $orange;
             font-size: 2rem;
             font-weight: 800;
+
             span {
                 font-weight: 300;
                 color: $black;
                 font-style: italic;
             }
         }
-        ul{
-            @include flex(justify-content,center, row,wrap);
+
+        ul {
+            @include flex(justify-content, center, row, wrap);
+
             li {
                 margin-left: 50px;
+
+                @media(max-width:768px) {
+                    margin-left: 10px;
+                    margin-bottom: 10px;
+                    ;
+                }
             }
         }
     }
 }
 
 /***footer***/
-footer{
-    @include flex(center, strech, row, wrap);
+footer {
+    @include flex(center, stretch, row, wrap);
+    color: $white;
 
-    article{
+    @media(max-width:768px) {
+        @include flex(center, stretch, column, wrap);
+    }
+
+    article {
         text-align: left;
-        color: $white;       
+        color: $white;
     }
 
     article:nth-child(1) {
-        flex:0 0 50%;
+        flex: 0 0 50%;
         background: $gray;
         padding: 60px;
-        h3{
+
+        h3 {
             padding-bottom: 20px;
         }
     }
-    article:nth-child(2){
-        flex:0 0 50%;
+
+    article:nth-child(2) {
+        flex: 0 0 50%;
         background: $orange;
         padding: 60px;
-        h2{
+
+        h2 {
             padding-bottom: 20px;
-            font-size: 2rem;;
+            font-size: 2rem;
+            ;
         }
     }
 }
 
-.bootomBar{
+.bootomBar {
     text-align: center;
-    p{
+
+    p {
         padding: 20px;
-       a {
+
+        a {
             color: $orange;
         }
     }
+}
+
+/***mainHeader***/
+.mainHeader {
+    background-image: linear-gradient(to right, rgba($white, 0.99), rgba($white, 0.01)), url(../img/header.jpg);
+    @include bgImg(center, cover, no-repeat, 80vh);
+    @include flex(flex-start, center, row, wrap);
+
+    div {
+        flex: 0 0 40%;
+        margin-left: 10%;
+        padding: 40px;
+        background: linear-gradient(to right, rgba($white, 0.99), rgba($white, 0.01));
+
+        @media(max-width:768px) {
+            flex: 0 0 100%;
+            margin: 0;
+
+        }
+
+        h1 {
+            color: $orange;
+            text-shadow: $textShadow;
+
+            @media(max-width:768px) {
+                font-size: 2rem;
+                text-align: left;
+            }
+        }
+
+        button {
+            @include btn;
+        }
+    }
+}
+
+.uvod {
+    padding: $padding;
+    @include flex(space-between, center, row, wrap);
+
+    @media(max-width:768px) {
+        @include flex(space-between, center, column, wrap);
+
     }
 
-    /***mainHeader***/
-    .mainHeader {
-        background-image:  linear-gradient(to right, rgba($white,0.99), rgba($white,0.01)),url(../img/header.jpg);
-        @include bgImg(center,cover,no-repeat , 80vh );
-        @include flex(flex-start, center, row ,wrap );
-        div{
-            flex: 0 0 40%;
-            margin-left: 10%;
-            padding: 40px;
-            background:  linear-gradient(to right, rgba($white,0.99), rgba($white,0.01));
-            h1{
-                color: $orange;
+    article {
+        flex: 1;
+        padding: 50px;
+
+        @media(max-width:768px) {
+            @include flex(space-between, center, column, wrap);
+            padding: 20px 40px;
+        }
+
+        h2 {
+            font-weight: 800;
+
+            span {
+                font-weight: 300;
+                font-style: italic;
+            }
+        }
+
+        h3 {
+            font-size: 5rem;
+            color: $orange;
+            text-shadow: $textShadow;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+/***zelena***/
+.zelena {
+    padding: $padding;
+    color: $white;
+    background-image: url(../img/bg.jpg);
+    @include bgImg(center, cover, no-repeat, auto);
+
+    .container {
+        @include flex(space-between, center, row, wrap);
+
+        article {
+            flex: 0 0 45%;
+            margin-bottom: 150px;
+
+            @media(max-width:768px) {
+                flex: 0 0 100%;
+                margin-bottom: 50px;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            p {
+                margin-top: 30px;
+            }
+
+            h2 {
+                margin-bottom: 10px;
                 text-shadow: $textShadow;
-            }
 
-            button{
-                @include btn;
-            }          
-        }
-    }
-
-    .uvod{
-        padding: $padding;
-        @include flex(space-between, center,row ,wrap );
-        article{
-            flex: 1;
-            padding: 50px;
-            h2{
-                font-weight: 800;
-                span{
-                    font-weight: 300;
-                    font-style: italic;
+                @media(max-width:768px) {
+                    flex: 0 0 100%;
                 }
-            }
-            h3{
-                font-size: 5rem;
-                color: $orange;
-                text-shadow: $textShadow;
-            }
-            h4{
-                font-size: 1.5rem;
-                margin-bottom:30px;
             }
         }
     }
-    /***zeleno***/
-    .zelena {
-        padding: $padding;
-        color: $white;
-        background-image: url(../img/bg.jpg);
-        @include bgImg(center, cover, no-repeat, auto);
-        .container{
-            @include flex(space-between,center,row,wrap);
-            article {
-                flex: 0 0 45%;
-                img{
-                    width: 100%;
-                }
-                p{
-                    margin-top: 30px;
-                }
-                h2{
-                    margin-bottom:130px;
-                    text-shadow: $textShadow;
-                }
+}
+
+/***organic***/
+.organic {
+    @extend .zelena;
+    background-image: url(../img/bg2.jpg);
+
+    @media(max-width:768px) {
+        article:last-child {
+            @include flex(space-between, center, row, wrap);
+
+            p {
+                order: -1;
+                margin-bottom: 30px;
+            }
+
         }
     }
-    
-    /***organic***/
-    .organic{
-        @extend .zelena;
-        background-image: url(../img/bg2.jpg);
+}
+
+/***poruci***/
+.poruci {
+    @include flex(center, stretch, row, wrap);
+
+    @media(max-width:768px) {
+        @include flex(center, stretch, column, wrap);
     }
 
+    article {
+        flex: 1;
+
+        @media(max-width:768px) {
+            flex: 0 0 100%;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        button {
+            @include btn;
+            background: $white;
+
+            &:hover {
+                background: $gray;
+                color: $white;
+            }
+        }
+    }
+    article:nth-child(1){
+        @media(max-width:768px) {
+            display: none;
+        }
+    }
+    article:nth-child(1){
+        @media(max-width:768px) {
+            order:3;
+        }
+    }
+    article:last-child {
+        @include flex(flex-start, flex-start, column, wrap);
+        padding: 50px;
+        background: $orange;
+        @media(max-width:768px) {
+            order:2;
+        }
+
+    }
+}
