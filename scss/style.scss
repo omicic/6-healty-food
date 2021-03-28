@@ -152,11 +152,32 @@ footer{
 
             button{
                 @include btn;
+            }          
+        }
+    }
+
+    .uvod{
+        padding: $padding;
+        @include flex(space-between, center,row ,wrap );
+        article{
+            flex: 1;
+            padding: 50px;
+            h2{
+                font-weight: 800;
+                span{
+                    font-weight: 300;
+                    font-style: italic;
+                }
             }
-
-            
-
-            
+            h3{
+                font-size: 5rem;
+                color: $orange;
+                text-shadow: 0 0 2px $black;
+            }
+            h4{
+                font-size: 1.5rem;
+                margin-bottom:30px;
+            }
         }
     }
     
